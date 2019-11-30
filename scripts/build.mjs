@@ -109,7 +109,7 @@ async function buildOffline(version, brand, artifactName) {
 
 async function buildCss(artifactName) {
     // create css bundle
-    const cssMainFile = path.join(projectDir, "css/main.css");
+    const cssMainFile = path.join(projectDir, "src/css/main.css");
     const preCss = await fs.readFile(cssMainFile, "utf8");
     const cssBundler = postcss([postcssImport]);
     const postCss = await cssBundler.process(preCss, {from: cssMainFile});
